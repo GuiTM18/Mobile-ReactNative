@@ -1,12 +1,16 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Image, View } from 'react-native';
+import Form from './src/Components/Form';
+import Title from './src/Components/Title';
+
+let img = 'http://complemento.veja.abril.com.br/economia/calculadora-combustivel/img/abre.jpg'
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <Title style={styles.title}/>
+      <Image source={{ uri: img }} style={{ width: 300, height: 155, margin: 10}} />
+      <Form/>
     </View>
   );
 }
