@@ -8,11 +8,18 @@ export default function Form() {
     const [alcool, setAlcool] = useState(null)
     const [gasolina, setGasolina] = useState(null)
     const [valor, setValor] = useState(null)
+    const [use, setUse] = useState(null)
     
 
     function Calcular() {
         return setValor(
-            (alcool / gasolina).toFixed(2)  
+             (alcool / gasolina).toFixed(2)  
+        )
+        
+    }
+    function Calcule() {
+        return setUse(
+            valor <= 0.70 ? 'Alcool' : 'Gasolina'
         )
         
     }
@@ -20,13 +27,14 @@ export default function Form() {
     function Validar() {
         if (gasolina != null && alcool != null) {
             Calcular()
+            Calcule()
             setGasolina(null)
             setAlcool(null)
             return
         }
-        setValor(null)  
-    }
-
+          
+    }    
+    
     return (
         <View style={styles.position} >
             <View>
@@ -53,8 +61,9 @@ export default function Form() {
                 />
             </View>
             <Text>
-                <Result  message={valor}/>
+                <Result  message={valor} combus={use}/>
             </Text>
+              
         </View>
     );
 }

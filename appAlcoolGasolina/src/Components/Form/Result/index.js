@@ -8,6 +8,9 @@ export default function Result(props) {
        <Text style={styles.res}>
           Resultado: {props.message}
        </Text>
+       <Text style={styles.resu}>
+          Vale mais a pena usar: {props.combus}
+       </Text>
    </View>
    
   );
