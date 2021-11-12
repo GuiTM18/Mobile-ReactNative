@@ -102,8 +102,6 @@ class App extends Component {
         </View>
         <ScrollView>
 
-          {/* VIEW INPUT NOME */}
-
           <View style={styles.form}>
             <Text style={styles.label}>Nome:</Text>
             <TextInput
@@ -143,8 +141,6 @@ class App extends Component {
 
           </View>
 
-          {/* VIEW SLIDER */}
-
           <View style={styles.slider}>
             <Text style={styles.sliderLabel}>Limite da Conta</Text>
             <Slider
@@ -161,8 +157,6 @@ class App extends Component {
 
             <Text style={styles.sliderText}>R$ {this.state.valor.toFixed(2)}</Text>
           </View>
-
-          {/* VIEW SWITCH */}
 
           <View style={styles.switchArea}>
 
